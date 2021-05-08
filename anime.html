@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awadh Transport Animation Testing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: gray;
+            height: 100vh;
+        }
+        .container{
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: white;
+            width: 40vw;
+            height: 40vh;
+            min-width: 300px;
+            border: 2px solid black;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+            text-align: center;
+        }
+        p{
+            font-size: 190%;
+            font-weight: 700;
+        }
+        .inner{
+            height: 100%;
+            width: 100%;
+            visibility: hidden;
+            background:  orangered;
+            border: 2px solid transparent;
+            border-radius: 50px;
+            position:absolute;
+            z-index: -1;    
+        }
+         .container:hover .inner{
+            visibility: visible;
+            animation: example 0.5s linear;
+         }
+         .container:hover p, .container:hover i{
+             color: white;
+         }
+        @keyframes example {
+            0%  {left:0; top:100%;}
+            100% {left:0px; top:0px;}  
+        }
+         
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <i class="fa fa-truck fa-4x"></i>
+            <p>Transportation Services</p>
+            <div class="inner">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
